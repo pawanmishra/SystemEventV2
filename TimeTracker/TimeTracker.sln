@@ -1,0 +1,95 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemEvent", "SystemEvent\SystemEvent.csproj", "{C4ED4B06-1042-4AE7-87AE-61469A587B19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Migration", "Migration", "{859C47DC-94CE-41B2-97BA-FC107117DD0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracker.Migration.Core", "TimeTracker.Migration.Core\TimeTracker.Migration.Core.csproj", "{A999E0E7-18A2-4FDD-9BFC-6F5A5399A1BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTrackerMigration", "TimeTrackerMigration\TimeTrackerMigration.csproj", "{9F5F03B7-C130-49EA-A54A-68A03DA98116}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{43B9C87C-F623-4DC6-9CAD-FDE34C6632F7}"
+	ProjectSection(SolutionItems) = preProject
+		deployment.build = deployment.build
+		Migration.build = Migration.build
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracker.Web.Api", "TimeTracker.Web.Api\TimeTracker.Web.Api.csproj", "{922E52F1-7F53-4867-AB2D-2E04279CC18C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracker.Infrastructure", "TimeTracker.Web.Infrastructure\TimeTracker.Infrastructure.csproj", "{393E3E7D-9D66-4CDF-9755-5AFA010C1FCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracker.Core", "TimeTracker.Core\TimeTracker.Core.csproj", "{4E767E3E-E62A-4B4F-93B3-DEBA4D65637C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TimeTracker.Web.Client", "http://localhost:62126", "{3A3EA54D-4464-4FB0-A8F1-85E58D74F596}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_62126"
+		Debug.AspNetCompiler.PhysicalPath = "TimeTracker.Web.Client\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62126\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_62126"
+		Release.AspNetCompiler.PhysicalPath = "TimeTracker.Web.Client\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62126\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "TimeTracker.Web.Client\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B0E1211F-FE70-4371-9114-CA9F4F38BE25}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4ED4B06-1042-4AE7-87AE-61469A587B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4ED4B06-1042-4AE7-87AE-61469A587B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4ED4B06-1042-4AE7-87AE-61469A587B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4ED4B06-1042-4AE7-87AE-61469A587B19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A999E0E7-18A2-4FDD-9BFC-6F5A5399A1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A999E0E7-18A2-4FDD-9BFC-6F5A5399A1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A999E0E7-18A2-4FDD-9BFC-6F5A5399A1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A999E0E7-18A2-4FDD-9BFC-6F5A5399A1BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F5F03B7-C130-49EA-A54A-68A03DA98116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F5F03B7-C130-49EA-A54A-68A03DA98116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F5F03B7-C130-49EA-A54A-68A03DA98116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F5F03B7-C130-49EA-A54A-68A03DA98116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922E52F1-7F53-4867-AB2D-2E04279CC18C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922E52F1-7F53-4867-AB2D-2E04279CC18C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922E52F1-7F53-4867-AB2D-2E04279CC18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922E52F1-7F53-4867-AB2D-2E04279CC18C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{393E3E7D-9D66-4CDF-9755-5AFA010C1FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393E3E7D-9D66-4CDF-9755-5AFA010C1FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393E3E7D-9D66-4CDF-9755-5AFA010C1FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393E3E7D-9D66-4CDF-9755-5AFA010C1FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E767E3E-E62A-4B4F-93B3-DEBA4D65637C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E767E3E-E62A-4B4F-93B3-DEBA4D65637C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E767E3E-E62A-4B4F-93B3-DEBA4D65637C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E767E3E-E62A-4B4F-93B3-DEBA4D65637C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A3EA54D-4464-4FB0-A8F1-85E58D74F596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A3EA54D-4464-4FB0-A8F1-85E58D74F596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A3EA54D-4464-4FB0-A8F1-85E58D74F596}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A3EA54D-4464-4FB0-A8F1-85E58D74F596}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A999E0E7-18A2-4FDD-9BFC-6F5A5399A1BC} = {859C47DC-94CE-41B2-97BA-FC107117DD0D}
+		{9F5F03B7-C130-49EA-A54A-68A03DA98116} = {859C47DC-94CE-41B2-97BA-FC107117DD0D}
+	EndGlobalSection
+EndGlobal

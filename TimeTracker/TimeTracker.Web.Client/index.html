@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Time Tracker</title>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-resource.min.js"></script>
+    <script src="Scripts/highcharts-ng.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="Scripts/highcharts.js"></script>
+    <script src="Scripts/highcharts-more.js"></script>
+    <script src="Scripts/highstock.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="common/services/common.services.js"></script>
+    <script src="common/services/timeTrackerService.js"></script>
+    <script src="common/services/timeTrackerHistoryService.js"></script>
+
+    <script src="app/DatePickerCtrl.js"></script>
+    <script src="app/tracker/trackerCtrl.js"></script>
+    <script src="app/trackerHistory/trackerHistoryCtrl.js"></script>
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/dashboard.css" rel="stylesheet" />
+    <link href="Content/custom.css" rel="stylesheet" />
+</head>
+<body ng-app="timeTracker">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Time Tracker</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="row" ng-controller="DatePickerCtrl as dt">
+            <div class="col-md-3">
+                <h1 class="page-header">Dashboard</h1>
+            </div>
+            <div class="col-md-3">
+                <p class="input-group">
+                    <input type="text" class="form-control" datepicker-popup="{{dt.format}}" ng-model="dt.startDate" is-open="dt.opened" 
+                           datepicker-options="dt.dateOptions" ng-required="true" close-text="Close" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="dt.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <p class="input-group">
+                    <input type="text" class="form-control" datepicker-popup="{{dt.format}}" ng-model="dt.endDate" is-open="dt.opened" 
+                           datepicker-options="dt.dateOptions" ng-required="true" close-text="Close" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="dt.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary" ng-click="dt.getResult()">Search!!</button>
+            </div>
+        </div>
+        <div class="row placeholders">
+            <div ng-controller="TimeTrackerCtrl as vm">
+                <highchart id="chart1" config="vm.chartConfig"></highchart>
+            </div>
+        </div>
+        <h2 class="sub-header">Time Break-up</h2>
+        <div class="row placeholders">
+            <div ng-controller="TimeTrackerHistoryCtrl as svm">
+                <highchart id="chart2" config="svm.chartConfig"></highchart>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

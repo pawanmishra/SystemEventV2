@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Migrate" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MigratorTaskDirectory>$(MSBuildProjectDirectory)\packages\FluentMigrator.Tools.1.2.0.0\tools\AnyCPU\40\</MigratorTaskDirectory>
+    <MainProjectDirectory>$(MSBuildProjectDirectory)\SystemEvent</MainProjectDirectory>
+    <MigrationDll>$(MSBuildProjectDirectory)\TimeTrackerMigration\bin\Debug\TimeTrackerMigration.dll</MigrationDll>
+  </PropertyGroup>
+  <UsingTask TaskName="FluentMigrator.MSBuild.Migrate" AssemblyFile="$(MigratorTaskDirectory)FluentMigrator.MSBuild.dll"></UsingTask>
+  <Target Name="Common">
+    <XmlPeek XmlInputPath="$(MainProjectDirectory)\app.config" Query="/configuration/connectionStrings/add[@name='time_tracker']/@connectionString"
+             Condition="'$(ConnectionString)' == ''">
+      <Output TaskParameter="Result" PropertyName="ConnectionString"></Output>
+    </XmlPeek>
+  </Target>
+  <Target Name="Migrate" DependsOnTargets="Common">
+    <Message Text="Started migrating the database"></Message>
+    <Migrate Database="SqlServer2012" Connection="$(ConnectionString)" Target="$(MigrationDll)"></Migrate>
+  </Target>
+</Project>  
